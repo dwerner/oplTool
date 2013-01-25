@@ -1,0 +1,726 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<resource xmlns="http://www.wxwindows.org/wxxrc" version="2.3.0.1">
+	<object class="wxFrame" name="frame">
+		<style>wxDEFAULT_FRAME_STYLE|wxRESIZE_BORDER|wxTAB_TRAVERSAL</style>
+		<size>535,461</size>
+		<title>oplTool [prototype]</title>
+		<centered>1</centered>
+		<object class="wxBoxSizer">
+			<orient>wxVERTICAL</orient>
+			<object class="sizeritem">
+				<option>0</option>
+				<flag>wxEXPAND</flag>
+				<border>5</border>
+				<object class="wxFlexGridSizer">
+					<rows>2</rows>
+					<cols>2</cols>
+					<vgap>0</vgap>
+					<hgap>0</hgap>
+					<growablecols></growablecols>
+					<growablerows></growablerows>
+					<object class="sizeritem">
+						<option>0</option>
+						<flag>wxALIGN_CENTER|wxALL|wxEXPAND</flag>
+						<border>5</border>
+						<object class="wxStaticText" name="m_staticText20">
+							<font>
+								<size>8</size>
+								<family>swiss</family>
+								<style>normal</style>
+								<weight>bold</weight>
+								<underlined>0</underlined>
+								<face>Sans</face>
+							</font>
+							<label>Current ul.cfg:</label>
+						</object>
+					</object>
+					<object class="sizeritem">
+						<option>0</option>
+						<flag>wxALIGN_CENTER|wxALL|wxEXPAND</flag>
+						<border>5</border>
+						<object class="wxStaticText" name="current_config_static">
+							<font>
+								<size>8</size>
+								<family>swiss</family>
+								<style>normal</style>
+								<weight>normal</weight>
+								<underlined>0</underlined>
+								<face>Sans</face>
+							</font>
+							<label></label>
+						</object>
+					</object>
+				</object>
+			</object>
+			<object class="sizeritem">
+				<option>1</option>
+				<flag>wxEXPAND</flag>
+				<border>5</border>
+				<object class="wxGridSizer">
+					<rows>2</rows>
+					<cols>2</cols>
+					<vgap>0</vgap>
+					<hgap>0</hgap>
+					<object class="sizeritem">
+						<option>1</option>
+						<flag>wxEXPAND</flag>
+						<border>5</border>
+						<object class="wxStaticBoxSizer">
+							<orient>wxVERTICAL</orient>
+							<label></label>
+							<object class="sizeritem">
+								<option>0</option>
+								<flag>wxALL</flag>
+								<border>5</border>
+								<object class="wxButton" name="load_cfg_button">
+									<label>Load game directory</label>
+									<default>0</default>
+								</object>
+							</object>
+							<object class="sizeritem">
+								<option>0</option>
+								<flag>wxALL</flag>
+								<border>5</border>
+								<object class="wxButton" name="install_button">
+									<label>Install Game...</label>
+									<default>0</default>
+								</object>
+							</object>
+						</object>
+					</object>
+					<object class="sizeritem">
+						<option>0</option>
+						<flag>wxALL|wxEXPAND</flag>
+						<border>5</border>
+						<object class="wxStaticBoxSizer">
+							<orient>wxVERTICAL</orient>
+							<label>Installed Games</label>
+							<object class="spacer">
+								<option>0</option>
+								<flag></flag>
+								<border>5</border>
+								<size>0,10</size>
+							</object>
+							<object class="sizeritem">
+								<option>1</option>
+								<flag>wxALIGN_TOP|wxEXPAND</flag>
+								<border>5</border>
+								<object class="wxListBox" name="game_list_control">
+									<style>wxLB_ALWAYS_SB|wxLB_SINGLE|wxLB_SORT|wxFULL_REPAINT_ON_RESIZE</style>
+									<enabled>0</enabled>
+									<content>
+										<item>SMT Nocturne (3.9GB)</item>
+										<item>Sample entry</item>
+										<item>Sample Entry 2</item>
+										<item>one</item>
+										<item>two</item>
+										<item>three</item>
+										<item>four</item>
+									</content>
+								</object>
+							</object>
+							<object class="sizeritem">
+								<option>0</option>
+								<flag>wxALIGN_CENTER|wxALL|wxEXPAND</flag>
+								<border>5</border>
+								<object class="wxGridSizer">
+									<rows>2</rows>
+									<cols>2</cols>
+									<vgap>0</vgap>
+									<hgap>0</hgap>
+									<object class="sizeritem">
+										<option>0</option>
+										<flag>wxALL</flag>
+										<border>5</border>
+										<object class="wxButton" name="delete_button">
+											<enabled>0</enabled>
+											<label>Delete</label>
+											<default>0</default>
+										</object>
+									</object>
+									<object class="sizeritem">
+										<option>0</option>
+										<flag>wxALL</flag>
+										<border>5</border>
+										<object class="wxButton" name="export_button">
+											<enabled>0</enabled>
+											<label>Export as ISO</label>
+											<default>0</default>
+										</object>
+									</object>
+								</object>
+							</object>
+						</object>
+					</object>
+				</object>
+			</object>
+			<object class="sizeritem">
+				<option>0</option>
+				<flag></flag>
+				<border>5</border>
+				<object class="wxStaticBoxSizer">
+					<orient>wxVERTICAL</orient>
+					<label>Game Info</label>
+					<object class="sizeritem">
+						<option>0</option>
+						<flag></flag>
+						<border>5</border>
+						<object class="wxFlexGridSizer">
+							<rows>3</rows>
+							<cols>4</cols>
+							<vgap>0</vgap>
+							<hgap>0</hgap>
+							<growablecols></growablecols>
+							<growablerows></growablerows>
+							<object class="sizeritem">
+								<option>0</option>
+								<flag>wxALIGN_CENTER|wxALL</flag>
+								<border>5</border>
+								<object class="wxStaticText" name="game_name_static">
+									<enabled>0</enabled>
+									<font>
+										<size>10</size>
+										<family>swiss</family>
+										<style>normal</style>
+										<weight>bold</weight>
+										<underlined>0</underlined>
+										<face>Sans</face>
+									</font>
+									<label>Name</label>
+								</object>
+							</object>
+							<object class="sizeritem">
+								<option>1</option>
+								<flag>wxALIGN_CENTER|wxALL</flag>
+								<border>5</border>
+								<object class="wxTextCtrl" name="game_name_textctrl">
+									<size>270,-1</size>
+									<enabled>0</enabled>
+									<value></value>
+									<maxlength>32</maxlength>
+								</object>
+							</object>
+							<object class="sizeritem">
+								<option>0</option>
+								<flag>wxALIGN_CENTER|wxALL</flag>
+								<border>5</border>
+								<object class="wxButton" name="rename_button">
+									<enabled>0</enabled>
+									<label>Rename</label>
+									<default>0</default>
+								</object>
+							</object>
+							<object class="sizeritem">
+								<option>0</option>
+								<flag>wxALIGN_CENTER|wxALL</flag>
+								<border>5</border>
+								<object class="wxStaticText" name="max_char_static">
+									<enabled>0</enabled>
+									<font>
+										<size>8</size>
+										<family>swiss</family>
+										<style>normal</style>
+										<weight>normal</weight>
+										<underlined>0</underlined>
+										<face>Sans</face>
+									</font>
+									<label>(max 32 char)</label>
+								</object>
+							</object>
+							<object class="sizeritem">
+								<option>0</option>
+								<flag>wxALIGN_CENTER|wxALL|wxEXPAND</flag>
+								<border>5</border>
+								<object class="wxStaticText" name="size_static">
+									<enabled>0</enabled>
+									<font>
+										<size>10</size>
+										<family>swiss</family>
+										<style>normal</style>
+										<weight>bold</weight>
+										<underlined>0</underlined>
+										<face>Sans</face>
+									</font>
+									<label>Size</label>
+								</object>
+							</object>
+							<object class="sizeritem">
+								<option>0</option>
+								<flag>wxALL</flag>
+								<border>5</border>
+								<object class="wxStaticText" name="size_amount_static">
+									<enabled>0</enabled>
+									<label>0.0 MB</label>
+								</object>
+							</object>
+							<object class="sizeritem">
+								<option>0</option>
+								<flag>wxALIGN_CENTER|wxALL</flag>
+								<border>5</border>
+								<object class="wxStaticText" name="part_static">
+									<enabled>0</enabled>
+									<font>
+										<size>10</size>
+										<family>swiss</family>
+										<style>normal</style>
+										<weight>bold</weight>
+										<underlined>0</underlined>
+										<face>Sans</face>
+									</font>
+									<label>Parts</label>
+								</object>
+							</object>
+							<object class="sizeritem">
+								<option>0</option>
+								<flag>wxALL</flag>
+								<border>5</border>
+								<object class="wxStaticText" name="part_amount_static">
+									<enabled>0</enabled>
+									<label>0</label>
+								</object>
+							</object>
+							<object class="sizeritem">
+								<option>0</option>
+								<flag>wxALL</flag>
+								<border>5</border>
+								<object class="wxStaticText" name="media_static">
+									<enabled>0</enabled>
+									<font>
+										<size>10</size>
+										<family>swiss</family>
+										<style>normal</style>
+										<weight>bold</weight>
+										<underlined>0</underlined>
+										<face>Sans</face>
+									</font>
+									<label>Media</label>
+								</object>
+							</object>
+							<object class="sizeritem">
+								<option>0</option>
+								<flag>wxALL</flag>
+								<border>5</border>
+								<object class="wxStaticText" name="media_type_static">
+									<enabled>0</enabled>
+									<label>--</label>
+								</object>
+							</object>
+						</object>
+					</object>
+				</object>
+			</object>
+			<object class="sizeritem">
+				<option>0</option>
+				<flag>wxALIGN_RIGHT|wxALL</flag>
+				<border>5</border>
+				<object class="wxButton" name="quit_button">
+					<label>Quit</label>
+					<default>0</default>
+				</object>
+			</object>
+		</object>
+		<object class="wxStatusBar" name="m_statusBar1">
+			<style>wxST_SIZEGRIP</style>
+			<fields>1</fields>
+		</object>
+		<object class="wxMenuBar" name="menubar">
+			<label>menubar</label>
+			<object class="wxMenu" name="file_menu">
+				<label>_File</label>
+				<object class="wxMenuItem" name="mitem_file_open">
+					<label>_Open ul.cfg...</label>
+					<help></help>
+				</object>
+				<object class="wxMenuItem" name="mitem_file_quit">
+					<label>_Quit</label>
+					<help></help>
+				</object>
+			</object>
+			<object class="wxMenu" name="m_menu2">
+				<label>_Edit</label>
+				<object class="wxMenuItem" name="mitem_edit_prefs">
+					<label>_Preferences</label>
+					<help></help>
+				</object>
+			</object>
+		</object>
+	</object>
+	<object class="wxDialog" name="install_dialog">
+		<style>wxDEFAULT_DIALOG_STYLE</style>
+		<title>Install Game</title>
+		<centered>1</centered>
+		<object class="wxBoxSizer">
+			<orient>wxVERTICAL</orient>
+			<object class="sizeritem">
+				<option>1</option>
+				<flag>wxEXPAND</flag>
+				<border>5</border>
+				<object class="wxFlexGridSizer">
+					<rows>2</rows>
+					<cols>3</cols>
+					<vgap>0</vgap>
+					<hgap>0</hgap>
+					<growablecols></growablecols>
+					<growablerows></growablerows>
+					<object class="sizeritem">
+						<option>0</option>
+						<flag>wxALIGN_CENTER|wxALL</flag>
+						<border>5</border>
+						<object class="wxButton" name="choose_install_button">
+							<label>Choose</label>
+							<default>0</default>
+						</object>
+					</object>
+					<object class="sizeritem">
+						<option>0</option>
+						<flag>wxALIGN_CENTER|wxALIGN_RIGHT|wxALL</flag>
+						<border>5</border>
+						<object class="wxStaticText" name="game_instructions_static">
+							<font>
+								<size>7</size>
+								<family>swiss</family>
+								<style>normal</style>
+								<weight>bold</weight>
+								<underlined>0</underlined>
+								<face>Sans</face>
+							</font>
+							<label>Choose a game to install...</label>
+						</object>
+					</object>
+					<object class="spacer">
+						<option>1</option>
+						<flag>wxEXPAND</flag>
+						<border>5</border>
+						<size>0,0</size>
+					</object>
+					<object class="sizeritem">
+						<option>0</option>
+						<flag>wxALIGN_BOTTOM|wxALL</flag>
+						<border>5</border>
+						<object class="wxStaticText" name="m_staticText20">
+							<label>Game Name</label>
+						</object>
+					</object>
+					<object class="sizeritem">
+						<option>0</option>
+						<flag>wxALIGN_CENTER_HORIZONTAL|wxEXPAND</flag>
+						<border>5</border>
+						<object class="wxTextCtrl" name="game_name">
+							<value></value>
+							<maxlength>32</maxlength>
+						</object>
+					</object>
+					<object class="spacer">
+						<option>1</option>
+						<flag>wxEXPAND</flag>
+						<border>5</border>
+						<size>0,0</size>
+					</object>
+					<object class="sizeritem">
+						<option>0</option>
+						<flag>wxALIGN_CENTER|wxALL</flag>
+						<border>5</border>
+						<object class="wxStaticText" name="m_staticText21">
+							<label>Media Type</label>
+						</object>
+					</object>
+					<object class="sizeritem">
+						<option>0</option>
+						<flag>wxALIGN_CENTER|wxALL</flag>
+						<border>5</border>
+						<object class="wxChoice" name="media_choice">
+							<selection>0</selection>
+							<content>
+								<item>DVD</item>
+								<item>CD</item>
+							</content>
+						</object>
+					</object>
+					<object class="spacer">
+						<option>1</option>
+						<flag>wxEXPAND</flag>
+						<border>5</border>
+						<size>0,0</size>
+					</object>
+					<object class="sizeritem">
+						<option>0</option>
+						<flag>wxALIGN_CENTER|wxALIGN_RIGHT|wxALL</flag>
+						<border>5</border>
+						<object class="wxStaticText" name="progress_static">
+							<enabled>0</enabled>
+							<label>Progress:</label>
+						</object>
+					</object>
+					<object class="sizeritem">
+						<option>1</option>
+						<flag>wxALIGN_CENTER|wxALL|wxEXPAND</flag>
+						<border>5</border>
+						<object class="wxGauge" name="progress_bar">
+							<style>wxGA_HORIZONTAL</style>
+							<enabled>0</enabled>
+							<range>100</range>
+							<value>0</value>
+						</object>
+					</object>
+					<object class="sizeritem">
+						<option>0</option>
+						<flag>wxALIGN_CENTER|wxALL</flag>
+						<border>5</border>
+						<object class="wxButton" name="cancel_install_button">
+							<label>Cancel</label>
+							<default>0</default>
+						</object>
+					</object>
+					<object class="spacer">
+						<option>1</option>
+						<flag>wxEXPAND</flag>
+						<border>5</border>
+						<size>0,0</size>
+					</object>
+					<object class="sizeritem">
+						<option>0</option>
+						<flag>wxALIGN_CENTER|wxALL</flag>
+						<border>5</border>
+						<object class="wxButton" name="install_game_button">
+							<enabled>0</enabled>
+							<font>
+								<size>10</size>
+								<family>swiss</family>
+								<style>normal</style>
+								<weight>bold</weight>
+								<underlined>0</underlined>
+								<face>Sans</face>
+							</font>
+							<label>Install</label>
+							<default>0</default>
+						</object>
+					</object>
+				</object>
+			</object>
+			<object class="sizeritem">
+				<option>0</option>
+				<flag>wxALL|wxEXPAND</flag>
+				<border>5</border>
+				<object class="wxListBox" name="console_output">
+					<content />
+				</object>
+			</object>
+		</object>
+	</object>
+	<object class="wxDialog" name="file_open_dialog">
+		<style>wxDEFAULT_DIALOG_STYLE|wxDIALOG_NO_PARENT</style>
+		<size>400,400</size>
+		<title>Open config</title>
+		<centered>1</centered>
+		<object class="wxBoxSizer">
+			<orient>wxVERTICAL</orient>
+			<object class="sizeritem">
+				<option>0</option>
+				<flag>wxALL</flag>
+				<border>5</border>
+				<object class="wxStaticText" name="static_load_notification">
+					<label>Choose game directory (containing ul.cfg):</label>
+				</object>
+			</object>
+			<object class="sizeritem">
+				<option>1</option>
+				<flag>wxEXPAND | wxALL</flag>
+				<border>5</border>
+				<object class="wxGenericDirCtrl" name="load_cfg_dirctrl">
+					<defaultfolder></defaultfolder>
+					<filter></filter>
+					<defaultfilter>0</defaultfilter>
+					<style>wxDIRCTRL_3D_INTERNAL|wxSUNKEN_BORDER</style>
+				</object>
+			</object>
+			<object class="sizeritem">
+				<option>0</option>
+				<flag>wxEXPAND</flag>
+				<border>5</border>
+				<object class="wxGridSizer">
+					<rows>2</rows>
+					<cols>2</cols>
+					<vgap>0</vgap>
+					<hgap>0</hgap>
+					<object class="sizeritem">
+						<option>0</option>
+						<flag>wxALIGN_CENTER</flag>
+						<border>5</border>
+						<object class="wxButton" name="confirm_load_button">
+							<style>wxALWAYS_SHOW_SB</style>
+							<enabled>0</enabled>
+							<label>Select</label>
+							<default>0</default>
+						</object>
+					</object>
+					<object class="sizeritem">
+						<option>0</option>
+						<flag>wxALIGN_CENTER|wxALL</flag>
+						<border>5</border>
+						<object class="wxButton" name="cancel_load_button">
+							<label>Cancel</label>
+							<default>0</default>
+						</object>
+					</object>
+				</object>
+			</object>
+		</object>
+	</object>
+	<object class="wxDialog" name="pref_dialog">
+		<style>wxDEFAULT_DIALOG_STYLE</style>
+		<title>Preferences</title>
+		<centered>1</centered>
+		<object class="wxBoxSizer">
+			<orient>wxVERTICAL</orient>
+			<object class="sizeritem">
+				<option>0</option>
+				<flag>wxEXPAND</flag>
+				<border>5</border>
+				<object class="wxGridSizer">
+					<rows>4</rows>
+					<cols>3</cols>
+					<vgap>0</vgap>
+					<hgap>0</hgap>
+					<object class="sizeritem">
+						<option>0</option>
+						<flag>wxALL</flag>
+						<border>5</border>
+						<object class="wxStaticText" name="iso_static">
+							<font>
+								<size>10</size>
+								<family>swiss</family>
+								<style>normal</style>
+								<weight>bold</weight>
+								<underlined>0</underlined>
+								<face>Sans</face>
+							</font>
+							<label>iso2opl Binary:</label>
+						</object>
+					</object>
+					<object class="sizeritem">
+						<option>0</option>
+						<flag>wxALL|wxEXPAND</flag>
+						<border>5</border>
+						<object class="wxStaticText" name="iso2opl_bin_static">
+							<font>
+								<size>7</size>
+								<family>swiss</family>
+								<style>normal</style>
+								<weight>normal</weight>
+								<underlined>0</underlined>
+								<face>Sans</face>
+							</font>
+							<label></label>
+						</object>
+					</object>
+					<object class="sizeritem">
+						<option>0</option>
+						<flag>wxALL|wxEXPAND</flag>
+						<border>5</border>
+						<object class="wxButton" name="iso2opl_choose_button">
+							<label>Choose...</label>
+							<default>0</default>
+						</object>
+					</object>
+					<object class="sizeritem">
+						<option>0</option>
+						<flag>wxALL</flag>
+						<border>5</border>
+						<object class="wxStaticText" name="opl2iso_static">
+							<font>
+								<size>10</size>
+								<family>swiss</family>
+								<style>normal</style>
+								<weight>bold</weight>
+								<underlined>0</underlined>
+								<face>Sans</face>
+							</font>
+							<label>opl2iso Binary:</label>
+						</object>
+					</object>
+					<object class="sizeritem">
+						<option>0</option>
+						<flag>wxALL|wxEXPAND</flag>
+						<border>5</border>
+						<object class="wxStaticText" name="opl2iso_bin_static">
+							<font>
+								<size>7</size>
+								<family>swiss</family>
+								<style>normal</style>
+								<weight>normal</weight>
+								<underlined>0</underlined>
+								<face>Sans</face>
+							</font>
+							<label></label>
+						</object>
+					</object>
+					<object class="sizeritem">
+						<option>0</option>
+						<flag>wxALL|wxEXPAND</flag>
+						<border>5</border>
+						<object class="wxButton" name="opl2iso_choose_button">
+							<label>Choose...</label>
+							<default>0</default>
+						</object>
+					</object>
+					<object class="sizeritem">
+						<option>0</option>
+						<flag>wxALL</flag>
+						<border>5</border>
+						<object class="wxStaticText" name="unrar_static">
+							<font>
+								<size>10</size>
+								<family>swiss</family>
+								<style>normal</style>
+								<weight>bold</weight>
+								<underlined>0</underlined>
+								<face>Sans</face>
+							</font>
+							<label>unrar Binary:</label>
+						</object>
+					</object>
+					<object class="sizeritem">
+						<option>0</option>
+						<flag>wxALL|wxEXPAND</flag>
+						<border>5</border>
+						<object class="wxStaticText" name="unrar_bin_static">
+							<font>
+								<size>7</size>
+								<family>swiss</family>
+								<style>normal</style>
+								<weight>normal</weight>
+								<underlined>0</underlined>
+								<face>Sans</face>
+							</font>
+							<label></label>
+						</object>
+					</object>
+					<object class="sizeritem">
+						<option>0</option>
+						<flag>wxALL|wxEXPAND</flag>
+						<border>5</border>
+						<object class="wxButton" name="unrar_choose_button">
+							<label>Choose...</label>
+							<default>0</default>
+						</object>
+					</object>
+					<object class="spacer">
+						<option>1</option>
+						<flag>wxEXPAND</flag>
+						<border>5</border>
+						<size>0,0</size>
+					</object>
+					<object class="sizeritem">
+						<option>0</option>
+						<flag>wxALL|wxEXPAND</flag>
+						<border>5</border>
+						<object class="wxButton" name="pref_close_button">
+							<label>Close Preferences</label>
+							<default>0</default>
+						</object>
+					</object>
+				</object>
+			</object>
+		</object>
+	</object>
+</resource>
